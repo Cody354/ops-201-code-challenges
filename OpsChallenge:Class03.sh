@@ -10,7 +10,7 @@
 
 # Declaration of functions
 
-# LOGIN HISTORY
+# LOGIN HISTORY WILL BE DISPLAYED 3 TIMES
 
 login_history='last'
 
@@ -19,6 +19,11 @@ login_history='last'
 
 echo "This is the login history" 
 $login_history
+echo "This is the login history" 
+$login_history
+echo "This is the login history" 
+$login_history
+
 
 
 # End
