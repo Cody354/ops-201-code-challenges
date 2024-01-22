@@ -6,7 +6,7 @@
 # Purpose:                      Purpose
 
 # Declaration of variables
-
+#SAMPLE SCRIPTS
 # PRICE OF APPLES
 #One equal sign means assigning a value
 #Two is comparing values
