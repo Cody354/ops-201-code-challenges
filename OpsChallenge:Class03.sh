@@ -1,32 +1,24 @@
 #!/bin/bash
 
-# Script Name:                  test
+# Script Name:                  login history
 # Author:                       Cody Blahnik
-# Date of latest revision:      00/00/0000
-# Purpose:                      Purpose
+# Date of latest revision:      1/22/2024
+# Purpose:                      display login history
 
-# Declaration of variables
-#SAMPLE SCRIPTS
-# PRICE OF APPLES
-#One equal sign means assigning a value
-#Two is comparing values
+#this will display all the login history
 
-PRICE_PER_APPLE=5
-MyFirstLetters=ABC
-greeting="HELLO WORLLD"
-FILES=`ls`
-WHO=`whoami`
+
 # Declaration of functions
 
+# LOGIN HISTORY
+
+login_history='last'
 
 
 # Main
 
-echo $greting
-echo "the price of an apple today is: $PRICE_PER_APPLE"
-echo "The first ten letters of the alphabet are: ${MyFirstLetters}DEFGHIJ"
-echo "This fold contains the ffollowing $FILES"
-echo "The person running this script is $WHO"
+echo "This is the login history" 
+$login_history
 
 
 # End
