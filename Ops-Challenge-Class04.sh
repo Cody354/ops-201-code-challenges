@@ -24,7 +24,7 @@ mkdir ${directories[*]}
 
 # References the array variable to create a new .txt file in each directory
 dir "${directories[@]}"
-touch "$dir/file.txt"
+touch "$directories/file.txt"
 
 
 
