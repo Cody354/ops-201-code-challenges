@@ -23,8 +23,9 @@ directories=(./ops201lab ./ops201lab/dir1 ./ops201lab/dir2 ./ops201lab/dir3 ./op
 mkdir ${directories[*]}
 
 # References the array variable to create a new .txt file in each directory
-dir "${directories[@]}"
-touch "$directories/file.txt"
+for dir in "${directories[@]}"; do
+    touch "$dir/file.txt"
+done
 
 
 
