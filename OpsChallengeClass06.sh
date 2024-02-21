@@ -8,7 +8,7 @@
 # Your script must use at least one array, one loop, and one conditional.
 # Declaration of variables
 
-# # Array to check File or Directory
+# Array to check File or Directory
 Check=("file.txt" "Directory")
 
 # Function that is going to search for the File or Directory
@@ -18,16 +18,39 @@ File_Directory_search() {
 
     # For the loop to go over the File/Directory
     for item in "${Check[@]}"; do
-        if [ -e "$item" ]; then
-            if [ -d "$item" ]; then
-                echo "Directory '$item' already exists!"
-            else
-                echo "File '$item' already exists!"
+        if [ "$item" == "$search_File_Directory" ]; then
+            if [ -e "$item" ]; then
+                if [ -d "$item" ]; then
+                    echo "Directory '$item' already exists!"
+                else
+                    echo "File '$item' already exists!"
+                fi
+                return 0
             fi
-            return 0
         fi
     done
-     return 1 # If a function returns 1, it indicates File or Directory doesn't exist.
+
+    # Check if the directory exists using the test command
+    if [ -d "$search_File_Directory" ]; then
+        echo "Directory '$search_File_Directory' found on your system."
+        return 0
+    fi
+
+    # If the File or Directory doesn't exist, create it
+    read -p "'$search_File_Directory' is not on your system, do you want to create it? (yes/no) " create_it
+    if [ "$create_it" == "yes" ]; then
+        if [[ "$search_File_Directory" == *"."* ]]; then
+            touch "$search_File_Directory" # Create a file
+        else
+            mkdir "$search_File_Directory" # Create a directory
+        fi
+        Check+=("$search_File_Directory")
+        echo "'$search_File_Directory' was created and added to your list."
+        return 0
+    else
+        echo "'$search_File_Directory' was not created."
+        return 1
+    fi
 }
 
 # Main
@@ -43,20 +66,6 @@ while true; do
     fi
 
     # Check if the File or Directory is on the system - call the function we built
-   read -p "'$search_File_Directory' is not on your system, do you want to create it? (yes/no) " create_it
-    if [ "$create_it" == "yes" ]; then
-        touch "$search_File_Directory" # Create a file, use mkdir for a directory
-        Check+=("$search_File_Directory")
-        echo "'$search_File_Directory' was created and added to your list."
-        return 0
-    else
-        echo "'$search_File_Directory' was not created."
-        return 1
-    fi
+    File_Directory_search "$Fi_Di_to_check"
 done
 
-
-
-
-
-# End
