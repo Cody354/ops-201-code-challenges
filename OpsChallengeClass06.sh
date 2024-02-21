@@ -43,18 +43,15 @@ while true; do
     fi
 
     # Check if the File or Directory is on the system - call the function we built
-    if File_Directory_search "$Fi_Di_to_check"; then
-        :
+   read -p "'$search_File_Directory' is not on your system, do you want to create it? (yes/no) " create_it
+    if [ "$create_it" == "yes" ]; then
+        touch "$search_File_Directory" # Create a file, use mkdir for a directory
+        Check+=("$search_File_Directory")
+        echo "'$search_File_Directory' was created and added to your list."
+        return 0
     else
-        # If the File or Directory is not on the list, ask the user if they want to add it
-        read -p "'$Fi_Di_to_check' is not on your system, do you want to create it? (yes/no) " create_it
-        if [ "$create_it" == "yes" ]; then
-            # This adds the new File or Directory to our Check array
-            Check+=("$Fi_Di_to_check")
-            echo "'$Fi_Di_to_check' was added to your list."
-        else
-            echo "'$Fi_Di_to_check' was not added to your list."
-        fi
+        echo "'$search_File_Directory' was not created."
+        return 1
     fi
 done
 
