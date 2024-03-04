@@ -8,7 +8,8 @@ Get-Process | Sort-Object -Property id -Descending
 Get-Process | Sort-Object -Property WS -Descending
 
 ::4. Start a browser process (such as Google Chrome or MS Edge) and have it open https://owasp.org/www-project-top-ten/.
- Get-Process | Sort-Object -Property WS -Descending | Select-Object -first 5
+Start-Process "C:\Microsoft\Edge\Application\msedge.exe" -ArgumentList "https://owasp.org/www-project-top-ten/"
+
 
 ::5. Start the process Notepad ten times using a for loop.
 for ($i = 1 : $i -le 10 : $i++) {
