@@ -31,14 +31,14 @@
     - I want to work on loops more.
 
 # BASH Scripts 201
-- [Creating files and Directiories](Ops-Challenge-Class04.sh )
-- [Killing processes](OpsChallengeClass05.sh )
-- [checking for Files and Directories](OpsChallengeClass06.sh)
-- [Display pc information](OpsChallengeClass07.sh)
-- [Display pc information](OpsChallengeClass07.sh)
+- [Creating files and Directiories](/201/Ops-Challenge-Class04.sh )
+- [Killing processes](/201/OpsChallengeClass05.sh )
+- [checking for Files and Directories](/201/OpsChallengeClass06.sh)
+- [Display pc information](/201/OpsChallengeClass07.sh)
+- [Display pc information](/201/OpsChallengeClass07.sh)
 
 # PowerShell Scripts
 
-- [Event Log](class9.bat)
-- [Get-Process](class10.bat)
-- [Event Log](class9.bat)
+- [Event Log](/201/class9.bat)
+- [Get-Process](/201/class10.bat)
+- [Event Log](/201/class9.bat)
