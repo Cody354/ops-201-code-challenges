@@ -30,6 +30,15 @@
 
     - I want to work on loops more.
 
-# Scripts
-  - 201 Script 
-- [challenge01](filename)
+# BASH Scripts 201
+- [Creating files and Directiories](Ops-Challenge-Class04.sh )
+- [Killing processes](OpsChallengeClass05.sh )
+- [checking for Files and Directories](OpsChallengeClass06.sh)
+- [Display pc information](OpsChallengeClass07.sh)
+- [Display pc information](OpsChallengeClass07.sh)
+
+# PowerShell Scripts
+
+- [Event Log](class9.bat)
+- [Get-Process](class10.bat)
+- [Event Log](class9.bat)
