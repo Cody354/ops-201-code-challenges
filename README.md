@@ -33,7 +33,7 @@
 # BASH Scripts 201
 - [Creating files and Directiories](/201/Ops-Challenge-Class04.sh )
 - [Killing processes](/201/OpsChallengeClass05.sh )
-- [checking for Files and Directories](/201/OpsChallengeClass06.sh)
+- [Checking for Files and Directories](/201/OpsChallengeClass06.sh)
 - [Display pc information](/201/OpsChallengeClass07.sh)
 - [Display pc information](/201/OpsChallengeClass07.sh)
 
